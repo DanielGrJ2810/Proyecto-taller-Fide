@@ -10,14 +10,16 @@ public class Menú
 {
     private int a_pagar;
     private int contador;
+    private String cadena;
     
     public Menú(){
         
     }
-    public Menú(int a_pagar,int contador)
+    public Menú(int a_pagar,int contador, String cadena)
     {
         this.a_pagar=a_pagar;
         this.contador=contador;
+        this.cadena=cadena;
     }
 
     public int getA_pagar() {
@@ -34,6 +36,14 @@ public class Menú
 
     public void setContador(int contador) {
         this.contador = 0;
+    }
+
+    public String getCadena() {
+        return cadena;
+    }
+
+    public void setCadena(String cadena) {
+        this.cadena = cadena;
     }
     
     
@@ -92,6 +102,7 @@ public class Menú
                case 5:
                    
                    break;
+               
       
                    
                case 0:    
