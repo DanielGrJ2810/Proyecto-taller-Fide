@@ -8,43 +8,31 @@ import javax.swing.*;
 
 public class Menú 
 {
-    private int a_pagar;
-    private int contador;
-    private String cadena;
+private double montoTotal;
+private String Factura;
+
+    public double getMontoTotal() {
+        return montoTotal;
+    }
+
+    public void setMontoTotal(double montoTotal) {
+        this.montoTotal = montoTotal;
+    }
+
+    public String getFactura() {
+        return Factura;
+    }
+
+    public void setFactura(String Factura) {
+        this.Factura = Factura;
+    }
+
     
-    public Menú(){
-        
-    }
-    public Menú(int a_pagar,int contador, String cadena)
-    {
-        this.a_pagar=a_pagar;
-        this.contador=contador;
-        this.cadena=cadena;
-    }
+    
+   
+   
 
-    public int getA_pagar() {
-        return a_pagar;
-    }
-
-    public void setA_pagar(int a_pagar) {
-        this.a_pagar = 0;
-    }
-
-    public int getContador() {
-        return contador;
-    }
-
-    public void setContador(int contador) {
-        this.contador = 0;
-    }
-
-    public String getCadena() {
-        return cadena;
-    }
-
-    public void setCadena(String cadena) {
-        this.cadena = cadena;
-    }
+   
     
     
     
@@ -55,25 +43,28 @@ public class Menú
     
    public void MENU()
    {
-       Menú menu2=new Menú();
-       menu2.setA_pagar(0);
-       menu2.setContador(0);
+      
+     double monto_servicio=0;
        
+      
+     
        Inicializar_Precios menu1=new Inicializar_Precios();
-       menu1.setAutoLavado(0);
-       menu1.setCambioAceite(0);
-       menu1.setRevisionGeneral(0);
-       menu1.setGasolinaLitro(0);
-       menu1.setPrecioRuedas(0);
+       menu1.getAutoLavado();
+       menu1.getCambioAceite();
+       menu1.getRevisionGeneral();
+       menu1.getGasolinaLitro();
+       menu1.getPrecioRuedas();
        
        Revision_General revision=new Revision_General();
+      
+       
        
        
        int opcion;
        
       do{
           
-           opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"Elija el servicion que desea aplicar!!!!"
+           opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"Elija el servicio que desea aplicar!!!!"
                    + "\n1.AutoLavado"
                    + "\n2.Cambio de Aceite"
                    + "\n3.Revision General"
@@ -88,11 +79,24 @@ public class Menú
                    break;
               
                case 2:
+           
                    
                    break;
                    
                case 3:
-                   revision.Revisar();
+                   monto_servicio=menu1.getRevisionGeneral();
+                   Servicio resultado=new Servicio();
+                   resultado=revision.Revisar2(monto_servicio);
+                   montoTotal=montoTotal+resultado.getGastos();
+                   JOptionPane.showMessageDialog(null,"monto total a pagar: "+montoTotal);
+                   Factura+="\n"
+                           +"Revision General: "+menu1.getRevisionGeneral();
+                   Factura+="\n";
+                           
+                    JOptionPane.showMessageDialog(null, Factura);
+                 
+
+                   
                    break;
                    
                case 4:
