@@ -7,9 +7,9 @@ package proyecto_taller_fide;
 public class Servicio
 {
     private String nombre;
-    private int Gastos;
+    private double Gastos;
     
-    public Servicio(String Nombre, int Gastos)
+    public Servicio(String Nombre, double Gastos)
     {
         this.nombre=Nombre;
      this.Gastos=Gastos;   
@@ -23,11 +23,14 @@ public class Servicio
         this.nombre = nombre;
     }
 
-    public int getGastos() {
+    public double getGastos() {
         return Gastos;
     }
 
-    public void setGastos(int Gastos) {
+    public void setGastos(double Gastos) {
         this.Gastos = Gastos;
+    }
+
+    public Servicio() {
     }
 }
