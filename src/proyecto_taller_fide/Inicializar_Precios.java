@@ -14,11 +14,11 @@ public class Inicializar_Precios
     
     public Inicializar_Precios()
     {
-        this.autoLavado=0;
-        this.cambioAceite=0;
-        this.revisionGeneral=0;
-        this.gasolinaLitro=0;
-        this.precioRuedas=0;
+        this.autoLavado=11000;
+        this.cambioAceite=10000;
+        this.revisionGeneral=20000;
+        this.gasolinaLitro=570;
+        this.precioRuedas=50000;
     }
     public Inicializar_Precios(double autoLavado, double cambioAceite, double revisionGeneral,double gasolinaLitro, double precioRuedas)
     {
@@ -34,7 +34,7 @@ public class Inicializar_Precios
     }
 
     public void setAutoLavado(double autoLavado) {
-        this.autoLavado = 11000;
+        this.autoLavado = autoLavado;
     }
 
     public double getCambioAceite() {
@@ -42,7 +42,7 @@ public class Inicializar_Precios
     }
 
     public void setCambioAceite(double cambioAceite) {
-        this.cambioAceite = 10000;
+        this.cambioAceite = cambioAceite;
     }
 
     public double getRevisionGeneral() {
@@ -50,7 +50,7 @@ public class Inicializar_Precios
     }
 
     public void setRevisionGeneral(double revisionGeneral) {
-        this.revisionGeneral = 20000;
+        this.revisionGeneral = revisionGeneral;
     }
 
     public double getGasolinaLitro() {
@@ -58,7 +58,7 @@ public class Inicializar_Precios
     }
 
     public void setGasolinaLitro(double gasolinaLitro) {
-        this.gasolinaLitro = 570;
+        this.gasolinaLitro = gasolinaLitro;
     }
 
     public double getPrecioRuedas() {
@@ -66,7 +66,7 @@ public class Inicializar_Precios
     }
 
     public void setPrecioRuedas(double precioRuedas) {
-        this.precioRuedas = 50000;
+        this.precioRuedas = precioRuedas;
     }
     
     
