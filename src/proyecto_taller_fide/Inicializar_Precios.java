@@ -1,5 +1,9 @@
 /*
-
+U.Fidelitas
+Introduccion a la Programacion
+Realizado por: Daniel Granados, Bryan Brenes, Jostin Bermudez.
+Programa Taller_FIDE
+17/12/2020
  */
 package proyecto_taller_fide;
 
@@ -11,7 +15,7 @@ public class Inicializar_Precios
     private double revisionGeneral;
     private double gasolinaLitro;
     private double precioRuedas;
-    
+     
     public Inicializar_Precios()
     {
         this.autoLavado=11000;
